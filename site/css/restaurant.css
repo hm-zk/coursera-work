@@ -1,30 +1,34 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #50A7C2;
+  background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
+}
+
+.initial-loading {
+  margin-top: 60px;
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: #314251;
+  background-color: #f6b319;
   border-radius: 0;
   border: 0;
 }
- h3 {
-   text-align: center:
- }
- 
- 
 
+#logo-img {
+  background: url('restaurant-logo-favicon.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
+}
 
 .navbar-brand {
   padding-top: 25px;
 }
-
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
-  color: white;
+  color: #557c3e;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
@@ -41,7 +45,6 @@ body {
   text-transform: uppercase;
   font-size: .7em;
   margin-top: 15px;
-  
 }
 .navbar-brand p span { /* Star-K */
   vertical-align: middle;
@@ -61,6 +64,18 @@ body {
   font-size: 1.8em;
 }
 
+#phone {
+  margin-top: 5px;
+}
+#phone a { /* Phone number */
+  text-align: right;
+  padding-bottom: 0;
+}
+#phone div { /* We Deliver */
+  color: #557c3e;
+  text-align: right;
+  padding-right: 15px;
+}
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
@@ -71,76 +86,55 @@ body {
 }
 /* END HEADER */
 
-/* HOME PAGE */
-.container .jumbotron {
-  box-shadow: 0 0 50px #3F0C1F;
-  border: 2px solid #3F0C1F;
+/* FOOTER */
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
 }
-
-/* END HOME PAGE */
-
-/********** Large devices only **********/
-@media (min-width: 1200px) {
-  .container .jumbotron {
-    background:#485563;
-    height: 1000px;
-  text-align:justify;
-  padding: 10px;
-  overflow: auto;
-  }
-
+.panel-footer div.row {
+  margin-bottom: 35px;
 }
+#hours, #address {
+  line-height: 2;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+a[ui-sref="admin.auth"] {
+  color: #fff;
+}
+/* END FOOTER */
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
-
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
   /* End Header */
-
-  /* Home Page */
-  .container .jumbotron {
-    background: #485563;
-    height: 1550px;
-  text-align:justify;
-  padding: 10px;
-  overflow: auto;
-  
-  }
-  
-.hidden-md {
-  visability: hidden important!;
-}
-  /* End Home Page */
 }
 
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Home Page */
-  .container .jumbotron {
-    background: #485563;
-    height: 1000px;
-  text-align:justify;
-  padding: 10px;
-  overflow: auto;
-  
-  }
-  /* End Home Page */
- .hidden-md {
-  visability: hidden important!;
-  
-}
-}
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
   /* Header */
-  .container .jumbotron {
-    background: #485563;
-    height: 900px;
-  text-align:justify;
-  overflow: auto;
-  padding: 10px;
-  }
   .navbar-brand {
     padding-top: 10px;
     height: 80px;
@@ -174,13 +168,35 @@ body {
     background-color: #f6b319;
     color: #951c49;
   }
-
-
-  /* Home Page */
-  .container .jumbotron {
-    margin-top: 30px;
-  
-    padding: 10px;
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
   }
+  /* End Header */
 
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+  /* End Footer */
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 5px;
+    font-size: 6vw;
+  }
+  /* End Header */
 }
